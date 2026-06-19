@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetheria Travels | Bespoke Luxury Expeditions & Elite Travel Curators</title>
+  <meta name="description" content="Curating rare experiences, exclusive overwater sanctuaries, high-altitude alpine retreats, and immersive cross-cultural journeys. Travel beautiful, travel with Aetheria Travels.">
+  <meta name="keywords" content="luxury travel agency, custom tours, private butler travel, maldives premium villa bookings, exclusive japan ryokan, luxury passport services, travel concierge">
+  <link rel="icon" href="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=32" type="image/x-icon">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aetheria Travels | Rare Bespoke Voyages">
+  <meta property="og:description" content="Discover curated retreats, private boutique flights, and completely tailored travel plans executed by our dedicated digital travel concierges.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="data:application/json;charset=utf-8,%7B%22name%22%3A%22Holiday%20Blazer%22%2C%22short_name%22%3A%22Holiday%20Blaz%22%2C%22description%22%3A%22Curating%20rare%20experiences%2C%20exclusive%20overwater%20sanctuaries%2C%20high-altitude%20alpine%20retreats%2C%20and%20immersive%20cross-cultural%20journeys.%20Travel%20beautiful%2C%20travel%20with%20Aetheria%20Travels.%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230f172a%22%2C%22theme_color%22%3A%22%231e293b%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
+
+  <!-- Google Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f4fbf7',
+              100: '#e5f6ed',
+              500: '#10b981', // Emerald theme
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b'
+            },
+            accent: {
+              gold: '#d97706',
+              amber: '#f59e0b',
+              luxury: '#c5a880'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Glassmorphism styles & animations -->
+  <style>
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+    .glass-input {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    .glass-input:focus {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: #10b981;
+      outline: none;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #c5a880;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+    .custom-gradient {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+    .text-glow {
+      text-shadow: 0 0 20px rgba(197, 168, 128, 0.3);
+    }
+    
+    /* Animation effects */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="custom-gradient text-slate-100 font-sans min-h-screen selection:bg-accent-luxury/30 selection:text-white leading-relaxed">
+
+  <!-- TOP HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 active:scale-95 transition-transform" onclick="navigateTo('home')">
+        <img src="" alt="Holiday Blazer" class="h-10 w-10 object-cover rounded-full border border-accent-luxury/50" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=200'">
+        <span class="font-serif text-xl tracking-wider font-semibold text-white text-glow">Holiday Blazer</span>
+      </a>
+      
+      <!-- NAV ITEMS -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#home" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('home')">Home</a>
+        <a href="#packages" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('packages')">Expeditions</a>
+        <a href="#visa" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('visa')">Visa Passports</a>
+        <a href="#hotels" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('hotels')">Partnership Hotels</a>
+        <a href="#flights" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('flights')">Flights</a>
+        <a href="#gallery" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('gallery')">Gallery</a>
+        <a href="#blogs" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('blogs')">Chronicles</a>
+        <a href="#contact" class="nav-link text-sm font-medium text-slate-300 hover:text-white tracking-wide" onclick="navigateTo('contact')">Inquire</a>
+      </nav>
+
+      <!-- CONTACT CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="https://wa.me/+971501234567" target="_blank" class="flex items-center gap-2 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/30 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-emerald-400 transition-all duration-300">
+          <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Butler
+        </a>
+        <a href="#contact" onclick="navigateTo('contact')" class="bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-accent-luxury/90 hover:to-amber-700/90 text-slate-950 font-bold px-5 py-2.5 rounded-full text-xs tracking-widest uppercase transition-transform active:scale-95">
+          Consult Now
+        </a>
+      </div>
+
+      <!-- MOBILE TRIGGER -->
+      <button class="lg:hidden text-slate-300 hover:text-white focus:outline-none" onclick="toggleMobileMenu()">
+        <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE ROUTER DRAWER -->
+    <div id="mobileMenu" class="hidden lg:hidden px-6 py-6 border-t border-slate-800/80 bg-slate-950/95 backdrop-blur-xl absolute top-full left-0 right-0 flex flex-col gap-4">
+      <a href="#home" class="py-2 text-slate-350 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('home'); toggleMobileMenu()">Home</a>
+      <a href="#packages" class="py-2 text-slate-350 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('packages'); toggleMobileMenu()">Expeditions</a>
+      <a href="#visa" class="py-2 text-slate-300 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('visa'); toggleMobileMenu()">Visa Services</a>
+      <a href="#hotels" class="py-2 text-slate-300 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('hotels'); toggleMobileMenu()">Hotel Listings</a>
+      <a href="#flights" class="py-2 text-slate-300 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('flights'); toggleMobileMenu()">Flight Banners</a>
+      <a href="#gallery" class="py-2 text-slate-300 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('gallery'); toggleMobileMenu()">Gallery</a>
+      <a href="#blogs" class="py-2 text-slate-300 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('blogs'); toggleMobileMenu()">Chronicles (Blogs)</a>
+      <a href="#contact" class="py-2 text-slate-300 hover:text-white border-b border-white/5 font-medium" onclick="navigateTo('contact'); toggleMobileMenu()">Inquire (Contact)</a>
+      <div class="flex flex-col gap-3 mt-4">
+        <a href="https://wa.me/+971501234567" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600/20 text-emerald-400 py-3 rounded-xl border border-emerald-500/30 text-sm font-semibold">
+          <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Concierge
+        </a>
+        <a href="#contact" onclick="navigateTo('contact'); toggleMobileMenu()" class="bg-accent-luxury text-slate-950 py-3 rounded-xl text-center text-sm font-bold tracking-wider uppercase">
+          Consult Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO CAROUSEL -->
+  <section id="heroSection" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <div id="carouselWrapper" class="absolute inset-0">
+      
+        <div class="absolute inset-0 transition-all duration-1000 transform opacity-0 opacity-100 scale-100 z-10" id="slide-0">
+          <!-- Overlay background darkener -->
+          <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/60 to-slate-950/95 z-10"></div>
+          <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=1600" alt="Discover the Art of Bespoke Voyages" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=1600'">
+          
+          <div class="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-6 max-w-4xl mx-auto">
+            <span class="text-accent-luxury font-mono text-xs md:text-sm uppercase tracking-widest leading-none mb-4 animate-fade-in text-glow">CURATED WORLD EXPEDITIONS</span>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-semibold text-white tracking-tight leading-tight md:leading-tight mb-6 animate-fade-in">Discover the Art of Bespoke Voyages</h1>
+            <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl font-light mb-10 leading-relaxed animate-fade-in">Unveiling curated premium destinations and flawless custom itineraries, engineered for the worldly traveler.</p>
+            <div class="flex flex-wrap items-center justify-center gap-4 animate-fade-in">
+              <a href="#packages" onclick="navigateTo('packages')" class="bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold px-8 py-4 rounded-full text-xs tracking-widest uppercase transition-all duration-300 active:scale-95 shadow-xl hover:shadow-accent-luxury/20">
+                Explore Rare Collections
+              </a>
+              <a href="#contact" onclick="navigateTo('contact')" class="bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-8 py-4 rounded-full text-xs tracking-widest uppercase transition-transform active:scale-95">
+                Custom Briefing
+              </a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="absolute inset-0 transition-all duration-1000 transform opacity-0 scale-105 z-0" id="slide-1">
+          <!-- Overlay background darkener -->
+          <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/60 to-slate-950/95 z-10"></div>
+          <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&q=80&w=1600" alt="Elevated Overwater Paradises" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=1600'">
+          
+          <div class="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-6 max-w-4xl mx-auto">
+            <span class="text-accent-luxury font-mono text-xs md:text-sm uppercase tracking-widest leading-none mb-4 animate-fade-in text-glow">CURATED WORLD EXPEDITIONS</span>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-semibold text-white tracking-tight leading-tight md:leading-tight mb-6 animate-fade-in">Elevated Overwater Paradises</h1>
+            <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl font-light mb-10 leading-relaxed animate-fade-in">Bask under turquoise skies in ultra-private private villas in the Maldives and French Polynesia.</p>
+            <div class="flex flex-wrap items-center justify-center gap-4 animate-fade-in">
+              <a href="#packages" onclick="navigateTo('packages')" class="bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold px-8 py-4 rounded-full text-xs tracking-widest uppercase transition-all duration-300 active:scale-95 shadow-xl hover:shadow-accent-luxury/20">
+                Inquire Sanctuary
+              </a>
+              <a href="#contact" onclick="navigateTo('contact')" class="bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-8 py-4 rounded-full text-xs tracking-widest uppercase transition-transform active:scale-95">
+                Custom Briefing
+              </a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    
+    <!-- Carousel Controls -->
+    
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-35 flex items-center gap-3">
+        
+          <button onclick="setSlide(0)" id="dot-0" class="w-3 h-3 rounded-full transition-all duration-300 bg-accent-luxury scale-125"></button>
+        
+          <button onclick="setSlide(1)" id="dot-1" class="w-3 h-3 rounded-full transition-all duration-300 bg-slate-600 hover:bg-slate-400"></button>
+        
+      </div>
+    
+  </section>
+
+  <!-- MAIN WRAPPER -->
+  <main class="relative z-30 max-w-7xl mx-auto px-6 py-20 flex flex-col gap-32">
+
+    <!-- DESTINATION SEARCH ENGINE -->
+    <section class="-mt-44 relative z-40">
+      <div class="p-8 rounded-3xl bg-slate-900/60 backdrop-blur-2xl border border-white/10 shadow-2xl">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3">Live Search Engines</span>
+        <h3 class="font-serif text-2xl font-semibold mb-6 flex items-center gap-2">
+          <i data-lucide="compass" class="text-accent-luxury"></i> Search Rare Voyages & Retreats
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <!-- Keyword Search -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-xs text-slate-400 font-medium ml-1">Destination or Theme</label>
+            <div class="relative">
+              <i data-lucide="search" class="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400"></i>
+              <input type="text" id="searchKeyword" placeholder="e.g. Maldives, Europe, Japan..." class="w-full glass-input pl-10 pr-4 py-3 rounded-xl text-sm" oninput="runLocalSearch()">
+            </div>
+          </div>
+          
+          <!-- Category Filter -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-xs text-slate-400 font-medium ml-1">Category Type</label>
+            <div class="relative">
+              <i data-lucide="tag" class="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400 font-none"></i>
+              <select id="searchCategory" class="w-full glass-input pl-10 pr-4 py-3 rounded-xl text-sm appearance-none cursor-pointer" onchange="runLocalSearch()">
+                <option value="">All Categories</option>
+                <option value="Domestic">Domestic</option>
+                <option value="International">International</option>
+                <option value="Honeymoon">Honeymoon</option>
+                <option value="Family">Family</option>
+                <option value="Luxury">Luxury</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Group Tour">Group Tour</option>
+                <option value="Corporate Tour">Corporate Tour</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Price Limit -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-xs text-slate-400 font-medium ml-1">Max Price Budget ($)</label>
+            <div class="relative">
+              <i data-lucide="dollar-sign" class="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400"></i>
+              <input type="number" id="searchMaxPrice" placeholder="e.g. 5000" class="w-full glass-input pl-10 pr-4 py-3 rounded-xl text-sm" oninput="runLocalSearch()">
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button onclick="clearSearch()" class="h-11 self-end bg-slate-800 hover:bg-slate-750 border border-slate-700/80 text-xs font-semibold tracking-wider uppercase text-slate-300 uppercase py-3 rounded-xl transition-all duration-200">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES SECTION -->
+    <section id="packages" class="scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3">SELECT LUXURY JOURNEYS</span>
+        <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-6">Our Majestic Expeditions</h2>
+        <div class="w-12 h-1 bg-accent-luxury mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-400 text-sm font-light">Each itinerary is crafted to optimize visual rhythm, security, high cultural immersion, and luxurious leisure.</p>
+      </div>
+
+      <!-- Packages Grid -->
+      <div id="packagesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered dynamically by script -->
+      </div>
+    </section>
+
+    <!-- VISA SERVICES SECTION -->
+    <section id="visa" class="scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3 font-semibold">GLOBAL TRAVEL COMPLIANCE</span>
+        <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-6">Seamless Visa Passports</h2>
+        <div class="w-12 h-1 bg-accent-luxury mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-400 text-sm font-light">Skip administrative queues. We analyze legal standards to fast-track approval times across premium global corridors.</p>
+      </div>
+
+      <!-- Visa List -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+          <div class="p-8 rounded-3xl glass-card flex flex-col md:flex-row gap-6 relative overflow-hidden group">
+            <div class="absolute top-0 right-0 h-24 w-24 bg-gradient-to-b from-emerald-500/10 to-transparent blur-xl pointer-events-none"></div>
+            
+            <div class="w-full md:w-1/3 h-48 md:h-full rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400" alt="Schengen Area (Europe)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400'">
+            </div>
+            
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-emerald-400 text-xs font-mono">Fast-Track Processing</span>
+                <h3 class="font-serif text-xl font-bold text-white mt-1 mb-2">Schengen Area (Europe)</h3>
+                <p class="text-slate-300 font-medium text-xs mb-4">Type: <span class="text-accent-luxury">Tourist Visa / Business Entry</span></p>
+                
+                <div class="flex items-center gap-6 mb-4 text-xs font-mono">
+                  <div>
+                    <span class="text-slate-400 block h-4">Process Time:</span>
+                    <span class="text-slate-200 font-semibold">10-15 Working Days</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block h-4">Consultation Fee:</span>
+                    <span class="text-emerald-400 font-bold font-sans">$160 USD</span>
+                  </div>
+                </div>
+
+                <details class="text-slate-400 text-xs cursor-pointer group mt-2">
+                  <summary class="font-semibold text-slate-300">View Core Requirements</summary>
+                  <ul class="list-disc pl-4 mt-2 flex flex-col gap-1 text-slate-400">
+                    <li>Passports must have at least 6 months remaining validity from return schedule</li><li>Certified bank records proving enough travel funds for the period (recent 3 months)</li><li>Confirmed outward/return airline tickets & verified local hotel bookings</li><li>Comprehensive Schenger-compliant global travel medical insurance worth min €30,000</li>
+                    <li class="font-mono text-[10px] text-slate-450">Doc: Original Passport with two blank adjacent pages</li><li class="font-mono text-[10px] text-slate-450">Doc: Two white-background recent biological size photos</li><li class="font-mono text-[10px] text-slate-450">Doc: Company employment certificate or verification letters</li><li class="font-mono text-[10px] text-slate-450">Doc: Complete visa system application forms filled completely</li>
+                  </ul>
+                </details>
+              </div>
+
+              <div class="mt-6 flex gap-2">
+                <button onclick="openVisaInquiry('v1')" class="flex-1 bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold py-2.5 rounded-xl text-center text-xs tracking-wider uppercase transition-all duration-300">
+                  Request Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="p-8 rounded-3xl glass-card flex flex-col md:flex-row gap-6 relative overflow-hidden group">
+            <div class="absolute top-0 right-0 h-24 w-24 bg-gradient-to-b from-emerald-500/10 to-transparent blur-xl pointer-events-none"></div>
+            
+            <div class="w-full md:w-1/3 h-48 md:h-full rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&q=80&w=400" alt="United Kingdom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400'">
+            </div>
+            
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-emerald-400 text-xs font-mono">Fast-Track Processing</span>
+                <h3 class="font-serif text-xl font-bold text-white mt-1 mb-2">United Kingdom</h3>
+                <p class="text-slate-300 font-medium text-xs mb-4">Type: <span class="text-accent-luxury">Standard Visiting Visa (6 Months Multi-entry)</span></p>
+                
+                <div class="flex items-center gap-6 mb-4 text-xs font-mono">
+                  <div>
+                    <span class="text-slate-400 block h-4">Process Time:</span>
+                    <span class="text-slate-200 font-semibold">7-10 Working Days (Premium track available)</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block h-4">Consultation Fee:</span>
+                    <span class="text-emerald-400 font-bold font-sans">$195 USD</span>
+                  </div>
+                </div>
+
+                <details class="text-slate-400 text-xs cursor-pointer group mt-2">
+                  <summary class="font-semibold text-slate-300">View Core Requirements</summary>
+                  <ul class="list-disc pl-4 mt-2 flex flex-col gap-1 text-slate-400">
+                    <li>Verified financial statements displaying strong savings</li><li>Detailed day-wise personal scheduling information</li><li>Employer NOC letter or legal property title verification files</li>
+                    <li class="font-mono text-[10px] text-slate-450">Doc: Valid current Passport</li><li class="font-mono text-[10px] text-slate-450">Doc: Salary slip copies for previous consecutive 6 months</li><li class="font-mono text-[10px] text-slate-450">Doc: Income tax return summaries</li><li class="font-mono text-[10px] text-slate-450">Doc: Complete travel arrangement plan confirmation</li>
+                  </ul>
+                </details>
+              </div>
+
+              <div class="mt-6 flex gap-2">
+                <button onclick="openVisaInquiry('v2')" class="flex-1 bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold py-2.5 rounded-xl text-center text-xs tracking-wider uppercase transition-all duration-300">
+                  Request Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- HOTEL PARTNERSHIPS SECTION -->
+    <section id="hotels" class="scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3 font-semibold">AETHERIA PRESTIGE PARTNERS</span>
+        <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-6">Partnership Flagship Hotels</h2>
+        <div class="w-12 h-1 bg-accent-luxury mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-400 text-sm font-light">Gain entry into five-star hospitality. Enjoy pre-cleared room upgrades, complimentary breakfasts, and priority access passes.</p>
+      </div>
+
+      <!-- Hotels Row -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+          <div class="rounded-3xl glass-card overflow-hidden flex flex-col">
+            <!-- Image Slider wrapper element -->
+            <div class="h-64 relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Aman Tokyo Resort" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" id="hotelImg-h_amp">
+              
+              <div class="absolute bottom-4 left-6 z-20 flex flex-col gap-1">
+                <div class="flex items-center gap-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white">Aman Tokyo Resort</h3>
+                <p class="text-slate-300 text-xs flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-luxury"></i> Otemachi Tower, Tokyo, Japan</p>
+              </div>
+
+              <div class="absolute top-4 right-6 z-20 bg-slate-900/95 backdrop-blur-md px-4 py-2 border border-white/10 rounded-xl text-right">
+                <span class="text-[10px] uppercase tracking-wider text-slate-400 block leading-none">VVIP starting</span>
+                <span class="text-accent-luxury font-serif text-lg font-bold leading-none block mt-1">$1600 <span class="text-xs font-sans text-slate-300">/ night</span></span>
+              </div>
+            </div>
+
+            <!-- Description & Amenities -->
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="flex flex-col gap-4">
+                <p class="text-slate-350 font-light text-sm leading-relaxed">Set high above the Tokyo skyline, Aman Tokyo successfully integrates traditional Japanese stone-wood architecture with cutting edge space concepts. Indulge in magnificent floor-to-ceiling Mt. Fuji sunset viewscapes from your private freestanding basalt bathtub.</p>
+                
+                <div>
+                  <span class="text-xs font-semibold text-accent-luxury uppercase block mb-2">Prestige Privileges Includes:</span>
+                  <div class="flex flex-wrap gap-2">
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Horizon Swimming pool
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Bespoke Wellness Onsen
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Michelin starred Japanese Dining
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> 24/7 personal tech concierge
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> High altitude gym suite
+                      </span>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 flex gap-2">
+                <button onclick="openHotelInquiry('h_amp')" class="w-full bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold py-3 rounded-xl text-center text-xs tracking-widest uppercase transition-all duration-300">
+                  Book VIP Package
+                </button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="rounded-3xl glass-card overflow-hidden flex flex-col">
+            <!-- Image Slider wrapper element -->
+            <div class="h-64 relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800" alt="The Marina Bay Sands Hotel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" id="hotelImg-h_mbs">
+              
+              <div class="absolute bottom-4 left-6 z-20 flex flex-col gap-1">
+                <div class="flex items-center gap-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white">The Marina Bay Sands Hotel</h3>
+                <p class="text-slate-300 text-xs flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-luxury"></i> Bayfront Avenue, Singapore</p>
+              </div>
+
+              <div class="absolute top-4 right-6 z-20 bg-slate-900/95 backdrop-blur-md px-4 py-2 border border-white/10 rounded-xl text-right">
+                <span class="text-[10px] uppercase tracking-wider text-slate-400 block leading-none">VVIP starting</span>
+                <span class="text-accent-luxury font-serif text-lg font-bold leading-none block mt-1">$850 <span class="text-xs font-sans text-slate-300">/ night</span></span>
+              </div>
+            </div>
+
+            <!-- Description & Amenities -->
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="flex flex-col gap-4">
+                <p class="text-slate-350 font-light text-sm leading-relaxed">Unparalleled architecture meets elite recreation. Relax on the 57th-floor sky park, hovering over the entire Singapore bay. Experience luxury shopping corridors and unmatched fine gastronomy right below your suite elevator.</p>
+                
+                <div>
+                  <span class="text-xs font-semibold text-accent-luxury uppercase block mb-2">Prestige Privileges Includes:</span>
+                  <div class="flex flex-wrap gap-2">
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> World's largest rooftop infinity pool
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Luxury sands sky-deck
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Twenty-four integrated premium casino bars
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Direct mall access
+                      </span>
+                    
+                      <span class="text-[10px] font-mono tracking-wider bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300 flex items-center gap-1">
+                        <i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Exceptional VIP lounge club
+                      </span>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 flex gap-2">
+                <button onclick="openHotelInquiry('h_mbs')" class="w-full bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold py-3 rounded-xl text-center text-xs tracking-widest uppercase transition-all duration-300">
+                  Book VIP Package
+                </button>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- FLIGHT TICKETS SECTION -->
+    <section id="flights" class="scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3 font-semibold font-mono">EXCLUSIVE AVIATION DEALS</span>
+        <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-6">Curated Flight Banners</h2>
+        <div class="w-12 h-1 bg-accent-luxury mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-400 text-sm font-light">Settle inside premium sky lounges. Fly in customized private suits and high luxury compartments at pre-negotiated agent tariff prices.</p>
+      </div>
+
+      <!-- Flights Rows -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+          <div class="p-1 rounded-3xl bg-gradient-to-r from-accent-luxury/20 via-white/5 to-white/5 border border-white/5 overflow-hidden flex flex-col hover:border-accent-luxury/30 transition-all duration-300">
+            <div class="h-44 overflow-hidden relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-slate-950/20 to-slate-950/80 z-10"></div>
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800" alt="Premium Sky-Suites Promo to London" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800'">
+              
+              <div class="absolute bottom-4 left-6 z-20">
+                <span class="text-xs font-mono text-accent-luxury uppercase block tracking-widest">Specialist Private Routes</span>
+                <h4 class="font-serif text-lg font-bold text-white mt-1">Singapore (SIN) ⇄ London Heathrow (LHR)</h4>
+              </div>
+            </div>
+
+            <div class="p-6 flex flex-col justify-between flex-1">
+              <p class="text-slate-350 text-sm font-light leading-relaxed mb-6">Fly in the pinnacle of aviation luxury. Includes fully enclosed private cabins, gourmet dining crafted on-demand, fine champagne cellars, and complimentary high-speed non-stop satellite Wi-Fi.</p>
+              
+              <div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto">
+                <span class="text-[10px] font-mono text-slate-400 flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Elite Lounge Entry Included
+                </span>
+                <button onclick="openFlightInquiry('Singapore (SIN) ⇄ London Heathrow (LHR)')" class="bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold px-4 py-2 rounded-lg text-[10px] tracking-wider uppercase transition-all duration-200">
+                  Request Cabin Seat
+                </button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="p-1 rounded-3xl bg-gradient-to-r from-accent-luxury/20 via-white/5 to-white/5 border border-white/5 overflow-hidden flex flex-col hover:border-accent-luxury/30 transition-all duration-300">
+            <div class="h-44 overflow-hidden relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-slate-950/20 to-slate-950/80 z-10"></div>
+              <img src="https://images.unsplash.com/photo-1483450388369-9ed95738483c?auto=format&fit=crop&q=80&w=800" alt="Ultra Non-Stop Routes to New York JFK" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800'">
+              
+              <div class="absolute bottom-4 left-6 z-20">
+                <span class="text-xs font-mono text-accent-luxury uppercase block tracking-widest">Specialist Private Routes</span>
+                <h4 class="font-serif text-lg font-bold text-white mt-1">Dubai (DXB) ⇄ New York City (JFK)</h4>
+              </div>
+            </div>
+
+            <div class="p-6 flex flex-col justify-between flex-1">
+              <p class="text-slate-350 text-sm font-light leading-relaxed mb-6">Settle into your flatbed massage seat on Emirates A380 with premium lounge access, onboard shower spa facilities, and direct fast-track airport transfer waiting upon touchdown.</p>
+              
+              <div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto">
+                <span class="text-[10px] font-mono text-slate-400 flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Elite Lounge Entry Included
+                </span>
+                <button onclick="openFlightInquiry('Dubai (DXB) ⇄ New York City (JFK)')" class="bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold px-4 py-2 rounded-lg text-[10px] tracking-wider uppercase transition-all duration-200">
+                  Request Cabin Seat
+                </button>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3 font-semibold font-mono">VISUAL CHRONICLES</span>
+        <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-6">Gallery Highlights</h2>
+        <div class="w-12 h-1 bg-accent-luxury mx-auto rounded-full mb-6"></div>
+        
+        <!-- Category Toggles -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+          <button onclick="filterGallery('All')" id="galBtn-All" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-accent-luxury bg-accent-luxury text-slate-950 transition-all duration-200">All</button>
+          <button onclick="filterGallery('Destinations')" id="galBtn-Destinations" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-slate-300 hover:text-white transition-all duration-200">Destinations</button>
+          <button onclick="filterGallery('Hotels')" id="galBtn-Hotels" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-slate-300 hover:text-white transition-all duration-200">Hotels</button>
+          <button onclick="filterGallery('Tours')" id="galBtn-Tours" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-slate-300 hover:text-white transition-all duration-200">Tours</button>
+          <button onclick="filterGallery('Visa')" id="galBtn-Visa" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-slate-300 hover:text-white transition-all duration-200">Visa</button>
+          <button onclick="filterGallery('Events')" id="galBtn-Events" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-slate-300 hover:text-white transition-all duration-200">Events</button>
+        </div>
+      </div>
+
+      <!-- Masonry Gallery -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid">
+        
+          <div class="gallery-item-wrapper group relative aspect-[4/3] rounded-2xl overflow-hidden glass-card cursor-pointer" data-category="Destinations" onclick="openFullscreenImage('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800')">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end p-4">
+              <div>
+                <span class="text-[10px] font-mono text-accent-luxury uppercase block">Destinations</span>
+                <span class="text-xs font-medium text-white block mt-1">Maldives Reef Sighting</span>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800" alt="Maldives Reef Sighting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=850'">
+          </div>
+        
+          <div class="gallery-item-wrapper group relative aspect-[4/3] rounded-2xl overflow-hidden glass-card cursor-pointer" data-category="Destinations" onclick="openFullscreenImage('https://images.unsplash.com/photo-1493020256206-bd5b42d76a5e?auto=format&fit=crop&q=80&w=800')">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end p-4">
+              <div>
+                <span class="text-[10px] font-mono text-accent-luxury uppercase block">Destinations</span>
+                <span class="text-xs font-medium text-white block mt-1">Santorini Horizon sunset</span>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1493020256206-bd5b42d76a5e?auto=format&fit=crop&q=80&w=800" alt="Santorini Horizon sunset" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=850'">
+          </div>
+        
+          <div class="gallery-item-wrapper group relative aspect-[4/3] rounded-2xl overflow-hidden glass-card cursor-pointer" data-category="Hotels" onclick="openFullscreenImage('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800')">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end p-4">
+              <div>
+                <span class="text-[10px] font-mono text-accent-luxury uppercase block">Hotels</span>
+                <span class="text-xs font-medium text-white block mt-1">Aman Tokyo Lounge Suite</span>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Aman Tokyo Lounge Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=850'">
+          </div>
+        
+          <div class="gallery-item-wrapper group relative aspect-[4/3] rounded-2xl overflow-hidden glass-card cursor-pointer" data-category="Tours" onclick="openFullscreenImage('https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&q=80&w=800')">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end p-4">
+              <div>
+                <span class="text-[10px] font-mono text-accent-luxury uppercase block">Tours</span>
+                <span class="text-xs font-medium text-white block mt-1">Tokyo Crossway Night Lights</span>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&q=80&w=800" alt="Tokyo Crossway Night Lights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=850'">
+          </div>
+        
+          <div class="gallery-item-wrapper group relative aspect-[4/3] rounded-2xl overflow-hidden glass-card cursor-pointer" data-category="Visa" onclick="openFullscreenImage('https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&q=80&w=800')">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end p-4">
+              <div>
+                <span class="text-[10px] font-mono text-accent-luxury uppercase block">Visa</span>
+                <span class="text-xs font-medium text-white block mt-1">UK London Big Ben</span>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&q=80&w=800" alt="UK London Big Ben" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=850'">
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- BLOGS SECTION -->
+    <section id="blogs" class="scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3 font-semibold font-mono">EDITORIAL CHRONICLES</span>
+        <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-6">Bespoke Travel Journals</h2>
+        <div class="w-12 h-1 bg-accent-luxury mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-400 text-sm font-light">Explore elite packing guides, luxury dining diaries, and thoughtful essays focused on authentic cultural discoveries.</p>
+      </div>
+
+      <!-- Blogs Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+          <article class="p-1 rounded-3xl bg-slate-900/50 border border-white/5 overflow-hidden flex flex-col md:flex-row gap-6 hover:border-white/10 transition-all duration-300">
+            <div class="w-full md:w-2/5 aspect-[4/3] md:aspect-auto h-48 md:h-full rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=800" alt="Curating a Minimalist Premium Luggage Strategy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=800'">
+            </div>
+            
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <span class="text-accent-luxury text-[10px] font-mono uppercase tracking-wider block mb-2">Travel Guides</span>
+                <h3 class="font-serif text-xl font-bold text-white mb-3 hover:text-accent-luxury transition-colors leading-snug cursor-pointer" onclick="openBlogModal('b1')">Curating a Minimalist Premium Luggage Strategy</h3>
+                
+                <div class="flex items-center gap-3 text-xs text-slate-400 mb-6 font-mono">
+                  <span>By Juliana West</span>
+                  <span>•</span>
+                  <span>2026-05-12</span>
+                </div>
+              </div>
+
+              <button onclick="openBlogModal('b1')" class="flex items-center gap-2 text-accent-luxury text-xs font-semibold tracking-wider uppercase group hover:text-white transition-colors">
+                Read Chronicle <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform"></i>
+              </button>
+            </div>
+          </article>
+        
+          <article class="p-1 rounded-3xl bg-slate-900/50 border border-white/5 overflow-hidden flex flex-col md:flex-row gap-6 hover:border-white/10 transition-all duration-300">
+            <div class="w-full md:w-2/5 aspect-[4/3] md:aspect-auto h-48 md:h-full rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800" alt="Kyoto's Hidden Kissaten Cafés & Tea Sanctuaries" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=800'">
+            </div>
+            
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <span class="text-accent-luxury text-[10px] font-mono uppercase tracking-wider block mb-2">Culinary Highlights</span>
+                <h3 class="font-serif text-xl font-bold text-white mb-3 hover:text-accent-luxury transition-colors leading-snug cursor-pointer" onclick="openBlogModal('b2')">Kyoto's Hidden Kissaten Cafés & Tea Sanctuaries</h3>
+                
+                <div class="flex items-center gap-3 text-xs text-slate-400 mb-6 font-mono">
+                  <span>By Kenji Sato</span>
+                  <span>•</span>
+                  <span>2026-06-01</span>
+                </div>
+              </div>
+
+              <button onclick="openBlogModal('b2')" class="flex items-center gap-2 text-accent-luxury text-xs font-semibold tracking-wider uppercase group hover:text-white transition-colors">
+                Read Chronicle <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform"></i>
+              </button>
+            </div>
+          </article>
+        
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS & FAQ CONTAINER -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 scroll-mt-24">
+      
+      <!-- Testimonials -->
+      <div id="testimonials">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3 font-semibold font-mono">ELITE USER REVIEWS</span>
+        <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">What our Guests Savor</h2>
+        
+        <div class="flex flex-col gap-6">
+          
+            <div class="p-6 rounded-2xl glass-card flex flex-col md:flex-row gap-5 relative">
+              <div class="h-16 w-16 rounded-full overflow-hidden border border-accent-luxury/20 shrink-0">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Victoria Montgomery" class="h-full w-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'">
+              </div>
+              
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <div>
+                    <h4 class="font-bold text-white text-sm block leading-none">Victoria Montgomery</h4>
+                    <span class="text-[10px] font-mono text-slate-400 mt-1 block leading-none">Switzerland</span>
+                  </div>
+                  <div class="flex items-center gap-0.5 text-amber-500">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
+                  </div>
+                </div>
+                <p class="text-slate-300 text-xs font-light leading-relaxed font-serif italic">"Aetheria Travels engineered a flawless honeymoon for us. Every seaplane connection, private catamaran dinner, and butler arrangement in the Maldives felt entirely effortless. Truly an unmatched service."</p>
+              </div>
+            </div>
+          
+            <div class="p-6 rounded-2xl glass-card flex flex-col md:flex-row gap-5 relative">
+              <div class="h-16 w-16 rounded-full overflow-hidden border border-accent-luxury/20 shrink-0">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Marcus Vanderbilt" class="h-full w-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'">
+              </div>
+              
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <div>
+                    <h4 class="font-bold text-white text-sm block leading-none">Marcus Vanderbilt</h4>
+                    <span class="text-[10px] font-mono text-slate-400 mt-1 block leading-none">United States</span>
+                  </div>
+                  <div class="flex items-center gap-0.5 text-amber-500">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
+                  </div>
+                </div>
+                <p class="text-slate-300 text-xs font-light leading-relaxed font-serif italic">"The Tokyo & Kyoto itinerary exceeded everything I had hoped for. The tea ceremony in Kyoto and the premium bullet train arrangements were pristine. I won't ever plan travels without them again."</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Accordion FAQs -->
+      <div id="faqs">
+        <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3 font-semibold font-mono">CURATOR RESPONSES</span>
+        <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">Frequently Addressed Queries</h2>
+        
+        <div class="flex flex-col gap-4">
+          
+            <div class="rounded-xl border border-white/5 bg-slate-900/35 overflow-hidden">
+              <button onclick="toggleFaq(0)" class="w-full text-left p-5 flex items-center justify-between group active:bg-white/5">
+                <span class="font-medium text-sm text-slate-200 group-hover:text-white">Are your travel packages fully customizable?</span>
+                <i data-lucide="chevron-down" id="faqChevron-0" class="w-4 h-4 text-slate-400 transform transition-transform"></i>
+              </button>
+              
+              <div id="faqAnswer-0" class="hidden p-5 border-t border-white/5 text-slate-400 text-xs leading-relaxed max-w-none">
+                Absolutely. Every luxury itinerary shown is merely a refined starting blueprint. Our dedicated digital travel designers will craft, reshape, and personalize every single meal, transit, hotel room, and private outing based on your specific life preferences.
+              </div>
+            </div>
+          
+            <div class="rounded-xl border border-white/5 bg-slate-900/35 overflow-hidden">
+              <button onclick="toggleFaq(1)" class="w-full text-left p-5 flex items-center justify-between group active:bg-white/5">
+                <span class="font-medium text-sm text-slate-200 group-hover:text-white">What does your global 24/7 travel butler service entail?</span>
+                <i data-lucide="chevron-down" id="faqChevron-1" class="w-4 h-4 text-slate-400 transform transition-transform"></i>
+              </button>
+              
+              <div id="faqAnswer-1" class="hidden p-5 border-t border-white/5 text-slate-400 text-xs leading-relaxed max-w-none">
+                Once your bespoke voyage begins, you'll be assigned a dedicated personal travel butler reachable over WhatsApp/phone. From secure local booking edits, premium restaurant recommendations, medical assistance support, to spontaneous reservation creations, we hold absolute dedication over your peace of mind.
+              </div>
+            </div>
+          
+            <div class="rounded-xl border border-white/5 bg-slate-900/35 overflow-hidden">
+              <button onclick="toggleFaq(2)" class="w-full text-left p-5 flex items-center justify-between group active:bg-white/5">
+                <span class="font-medium text-sm text-slate-200 group-hover:text-white">What is your premium cancellation and trip protection policy?</span>
+                <i data-lucide="chevron-down" id="faqChevron-2" class="w-4 h-4 text-slate-400 transform transition-transform"></i>
+              </button>
+              
+              <div id="faqAnswer-2" class="hidden p-5 border-t border-white/5 text-slate-400 text-xs leading-relaxed max-w-none">
+                Because we interface with hyper-exclusive luxury five-star resorts and private aviation operators, specific details vary. Generally, we offer complete reschedule freedom up to thirty days prior to departure, alongside unmatched premium trip cancellation insurances.
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- INQUIRE / CONTACT FORM -->
+    <section id="contact" class="scroll-mt-24">
+      <div class="p-8 md:p-12 rounded-3xl bg-slate-900/50 border border-white/5 flex flex-col lg:flex-row gap-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-radial-gradient from-accent-luxury/10 via-transparent to-transparent pointer-events-none"></div>
+        
+        <!-- Contact details -->
+        <div class="lg:w-2/5 flex flex-col justify-between z-10">
+          <div>
+            <span class="text-xs font-mono text-accent-luxury tracking-widest uppercase block mb-3">CUSTOM TAILOR BRIEFING</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-white mb-6">Brief Your Travel Curator</h2>
+            <p class="text-slate-400 text-xs font-light leading-relaxed mb-6">Tell us about your next dream journey and your preferred level of physical luxury. Our luxury curators will respond with an initial draft catalog outline within 12 hours.</p>
+          </div>
+
+          <div class="flex flex-col gap-4 text-xs font-mono">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent-luxury">
+                <i data-lucide="phone"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[10px]">Direct Call</span>
+                <span class="text-white font-semibold">+971 4 123 4567</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent-luxury">
+                <i data-lucide="mail"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[10px]">Direct Concierge Email</span>
+                <span class="text-white font-semibold">concierge@aetheriatravels.com</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent-luxury">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[10px]">Flagship Residency</span>
+                <span class="text-white font-semibold">Marina Heights, Suite 2404, Dubai Marina, Dubai, UAE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Working Contact Form -->
+        <form id="clientContactForm" onsubmit="handleClientSubmission(event)" class="flex-1 flex flex-col gap-4 z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[10px] font-mono text-slate-400 uppercase tracking-wider ml-1">Your Name</label>
+              <input type="text" id="leadName" required placeholder="e.g. Victor Montgomery" class="w-full glass-input px-4 py-3 rounded-xl text-xs">
+            </div>
+            
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[10px] font-mono text-slate-400 uppercase tracking-wider ml-1">Inquiry Type</label>
+              <select id="leadType" class="w-full glass-input px-4 py-3 rounded-xl text-xs appearance-none">
+                <option value="Inquiry">General Inquiry</option>
+                <option value="Package Booking">Package Booking</option>
+                <option value="Hotel Query">Hotel/Resort Partner Query</option>
+                <option value="Visa Consultation">Visa Consultation</option>
+                <option value="Flight Request">Private Cabin Flight Request</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[10px] font-mono text-slate-400 uppercase tracking-wider ml-1">E-mail Address</label>
+              <input type="email" id="leadEmail" required placeholder="e.g. victor@vanderbilt.com" class="w-full glass-input px-4 py-3 rounded-xl text-xs">
+            </div>
+            
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[10px] font-mono text-slate-400 uppercase tracking-wider ml-1">Mobile WhatsApp Number</label>
+              <input type="tel" id="leadPhone" required placeholder="e.g. +33 700 88 123" class="w-full glass-input px-4 py-3 rounded-xl text-xs">
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] font-mono text-slate-400 uppercase tracking-wider ml-1">Inquiry Message</label>
+            <textarea id="leadMessage" required rows="4" placeholder="Brief us about your specific destinations criteria, duration, and accommodation wishes..." class="w-full glass-input px-4 py-3 rounded-xl text-xs"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-gradient-to-r from-accent-luxury to-amber-700 hover:from-amber-700 hover:to-accent-luxury text-slate-950 font-bold py-3 text-center text-xs tracking-widest uppercase rounded-xl transition-all duration-300 active:scale-95">
+            Transcribe and Submit Briefing
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="border-t border-white/5 py-16 bg-slate-950/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <img src="" alt="Holiday Blazer" class="h-8 w-8 object-cover rounded-full border border-accent-luxury/50" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=200'">
+          <span class="font-serif text-lg tracking-wider font-semibold text-white">Holiday Blazer</span>
+        </div>
+        <p class="text-slate-450 font-light text-xs leading-relaxed mb-6">Elite global travel creators specializing in pristine custom itinerary development and VVIP support services.</p>
+        <div class="flex items-center gap-3">
+          <a href="https://instagram.com/" target="_blank" class="h-8 w-8 rounded-full bg-white/5 hover:bg-accent-luxury hover:text-slate-950 text-slate-400 flex items-center justify-center transition-all duration-200 border border-white/10">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a href="https://facebook.com/aetheriatravels" target="_blank" class="h-8 w-8 rounded-full bg-white/5 hover:bg-accent-luxury hover:text-slate-950 text-slate-400 flex items-center justify-center transition-all duration-200 border border-white/10">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </a>
+          <a href="https://youtube.com/aetheriatravels" target="_blank" class="h-8 w-8 rounded-full bg-white/5 hover:bg-accent-luxury hover:text-slate-950 text-slate-400 flex items-center justify-center transition-all duration-200 border border-white/10">
+            <i data-lucide="youtube" class="w-4 h-4"></i>
+          </a>
+          <a href="https://linkedin.com/company/aetheriatravels" target="_blank" class="h-8 w-8 rounded-full bg-white/5 hover:bg-accent-luxury hover:text-slate-950 text-slate-400 flex items-center justify-center transition-all duration-200 border border-white/10">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-6">Explore Portals</h4>
+        <div class="flex flex-col gap-3 text-xs text-slate-400">
+          <a href="#packages" onclick="navigateTo('packages')" class="hover:text-accent-luxury transition-colors">Elite Packages</a>
+          <a href="#visa" onclick="navigateTo('visa')" class="hover:text-accent-luxury transition-colors">Visa Portals</a>
+          <a href="#hotels" onclick="navigateTo('hotels')" class="hover:text-accent-luxury transition-colors">Partner Suites</a>
+          <a href="#flights" onclick="navigateTo('flights')" class="hover:text-accent-luxury transition-colors">Charter Banners</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-6">Media Chronicles</h4>
+        <div class="flex flex-col gap-3 text-xs text-slate-400">
+          <a href="#blogs" onclick="navigateTo('blogs')" class="hover:text-accent-luxury transition-colors">Bespoke Journals</a>
+          <a href="#gallery" onclick="navigateTo('gallery')" class="hover:text-accent-luxury transition-colors">Visual Photo Catalog</a>
+          <a href="#testimonials" class="hover:text-accent-luxury transition-colors">Guest Memoirs</a>
+          <a href="#faq" class="hover:text-accent-luxury transition-colors">Frequently Asked Queries</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-6">Concierge Center</h4>
+        <p class="text-xs text-emerald-400 font-medium mb-3 flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 block animate-pulse"></span> Flagship Support Live
+        </p>
+        <p class="text-xs text-slate-400 font-light leading-relaxed mb-4">Concierge support desks are staffed continuously by expert travel curators to assist active guests globally.</p>
+        <span class="text-[10px] font-mono bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-slate-300 block text-center">
+          Lobby: GMT +4 Residency
+        </span>
+      </div>
+    </div>
+
+    <!-- Sub copyright info -->
+    <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 font-mono gap-4">
+      <span>© 2027 Holiday Blazer. Impeccably engineered for elite travels.</span>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-white transition-colors">Privacy Charter</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Sanctum</a>
+        <a href="#" class="hover:text-white transition-colors">Cookies Configuration</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC TRAVEL PACKAGE DETAILS PRESTIGE DRAWER / MODAL -->
+  <div id="packageModal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-white/10 rounded-3xl max-w-4xl w-full text-slate-100 shadow-2xl relative overflow-hidden max-h-[90vh] flex flex-col">
+      <!-- Title banner & Close control -->
+      <div class="p-6 border-b border-light border-white/10 flex items-center justify-between">
+        <span class="text-xs font-mono text-accent-luxury tracking-wider uppercase font-semibold">Prestige Journey Details</span>
+        <button onclick="closePackageModal()" class="h-8 w-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable content -->
+      <div class="overflow-y-auto flex-1 p-6 md:p-8 flex flex-col gap-8" id="pkgModalContent">
+        <!-- Replaced dynamically by JS rendering engine -->
+      </div>
+    </div>
+  </div>
+
+  <!-- DYNAMIC BLOG POST READ PORTAL -->
+  <div id="blogModal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-slate-150/5 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-white/10 rounded-3xl max-w-3xl w-full text-slate-100 shadow-2xl relative flex flex-col max-h-[85vh]">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between">
+        <span class="text-xs font-mono text-accent-luxury tracking-wider uppercase" id="blogModalCategory">Aetheria Chronicles</span>
+        <button onclick="closeBlogModal()" class="h-8 w-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="overflow-y-auto flex-1 p-6 md:p-8" id="blogModalBody">
+        <!-- Rendered dynamically by script -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN IMAGE VIEWER -->
+  <div id="imageViewer" class="fixed inset-0 z-[100] hidden bg-black/95 flex items-center justify-center p-4" onclick="closeFullscreenImage()">
+    <button class="absolute top-6 right-6 text-slate-400 hover:text-white text-lg">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    <img id="viewerImg" src="" alt="Fullscreen image" class="max-w-full max-h-[90vh] object-contain rounded-xl">
+  </div>
+
+  <!-- TOAST ALERTS SYSTEM -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[100] transform translate-y-12 opacity-0 transition-all duration-300 px-6 py-4 rounded-xl bg-slate-900 border border-emerald-500 text-emerald-400 text-xs font-mono flex items-center gap-3">
+    <i data-lucide="check-circle" class="w-4 h-4 shrink-0"></i> <span id="toastMsg">Inquiry transcribed successfully!</span>
+  </div>
+
+  <!-- SYSTEM JAVASCRIPT LOGIC -->
+  <script>
+    // Embed parsed data
+    const DATA = {"company":{"name":"Holiday Blazer","logoUrl":"","faviconUrl":"https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=32","contactNumber":"+971 4 123 4567","whatsappNumber":"+971501234567","email":"concierge@aetheriatravels.com","address":"Marina Heights, Suite 2404, Dubai Marina, Dubai, UAE","mapsLink":"https://maps.google.com","instagram":"https://instagram.com/","facebook":"https://facebook.com/aetheriatravels","youtube":"https://youtube.com/aetheriatravels","linkedin":"https://linkedin.com/company/aetheriatravels"},"heroSlides":[{"id":"h1","title":"Discover the Art of Bespoke Voyages","subtitle":"Unveiling curated premium destinations and flawless custom itineraries, engineered for the worldly traveler.","ctaText":"Explore Rare Collections","imageUrl":"https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=1600"},{"id":"h2","title":"Elevated Overwater Paradises","subtitle":"Bask under turquoise skies in ultra-private private villas in the Maldives and French Polynesia.","ctaText":"Inquire Sanctuary","imageUrl":"https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&q=80&w=1600"}],"packages":[{"id":"p1","name":"Maldives Ultra Luxury Overwater Escape","country":"Maldives","city":"Male Atoll","duration":"6 Days, 5 Nights","price":5499,"discountPrice":4899,"description":"Step into infinite beauty. This ultra-premium residency places you above the crystal-clear turquoise waters of the private reef of Noonu Atoll. Includes private seaplane transfers, daily standard wellness spa sessions, and customized culinary menus crafted by Michelin-starred partners.","highlights":["Private 400sqm Overwater Mansion with slide directly into the lagoon","24/7 dedicated personal butler service","Private sunset catamaran cruise with champagne bar","Daily tailored wellness, yoga, and scuba dives"],"itinerary":[{"day":1,"title":"Arrival & Celestial Seaplane Transfer","plan":"Receive VIP fast-track customs clearance at Velana Airport, followed by a scenic 35-minute seaplane flight. Check-in to your Overwater Sunset Villa and enjoy a celebratory candlelight beach welcome gourmet dinner."},{"day":2,"title":"Lagoon Exploration & Spa Rituals","plan":"Indulge in a 90-minute signature couples therapy. Spend the afternoon exploring the active reef accompanied by a marine biologist."},{"day":3,"title":"Private Island Gastronomy Experience","plan":"Sail to a fully uninhabited sandbank for an extraordinary gourmet picnic prepared dynamically by your dedicated head chef."},{"day":4,"title":"Deep Sea Snorkelling & Manta Ray Hunt","plan":"Board a private high-speed luxury boat to sight and swim alongside the magnificent local manta rays in the UNESCO biosphere reserve."},{"day":5,"title":"Sunset Catamaran & Starlight Cinema","plan":"Cruise around the atoll as the sun sets over the Indian Ocean. End the evening with a private cinema screening directly on the white sand under the stars."},{"day":6,"title":"Gourmet Farewell & Sea Departure","plan":"Enjoy a final Champagne breakfast in your villa plunge pool before embarking on your return seaplane flight to Male."}],"included":["All five-star luxury resort overwater villa accommodation","All private seaplane transfers","All meals, ultra-premium beverages, and resort credits","Private butler and personal concierge access","Complete equipment rental for all sports"],"excluded":["International flights to and from Male","Personal travel protection insurance","Gratuities and individual shopping"],"galleryImages":["https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800"],"coverImage":"https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&q=80&w=800","category":"Luxury","featured":true},{"id":"p2","name":"Tokyo & Kyoto: Cyberpunk Neon & Ancient Paths","country":"Japan","city":"Tokyo, Hakone, Kyoto","duration":"9 Days, 8 Nights","price":3600,"discountPrice":3299,"description":"Delve into the sharp aesthetic contrast of Japan. Journey through the retro-futuristic alleyways of Tokyo into the geothermal baths of Hakone, culminating in the golden temples and pristine geisha districts of historical Kyoto.","highlights":["Interactive private street-food tour of Shinjuku and Roppongi","Bespoke Bullet Train Green Car transit between prefectures","Luxury mountain ryokan with open-air hot-spring onsens","VIP private tea ceremony with an expert Kyoto geiko craftsman"],"itinerary":[{"day":1,"title":"Futuristic Tokyo Encounters","plan":"Arrive at Haneda airport for a private luxury transfer to your hotel in central Shibuya. Enjoy a welcome networking dinner featuring premium Kobe beef."},{"day":2,"title":"Digital Arts & Modern Subculture Walk","plan":"Venture to teamLab Planets for immersive art installations, then tour Akihabara and Harajuku subculture domains with a local guide."},{"day":3,"title":"Senso-ji Serenity & Neon Skytree Views","plan":"Visit the iconic ancient Senso-ji temple in Asakusa. In the evening, ascend the Tokyo Skytree for a stunning 360-degree vista of the metropolis."},{"day":4,"title":"Geothermal Hakone Retreat","plan":"Board the Romancecar to Hakone. Check into a high-end luxury Ryokan, put on a traditional Yukata, and soak in your private mineral thermal bath."},{"day":5,"title":"Mount Fuji Sightings & Shinkansen Flight","plan":"Cruise across calm Lake Ashi on a cruise boat. Transfer to Shinkansen Green Car to travel at supersonic speeds to historic Kyoto."},{"day":6,"title":"Arashiyama Bamboo & Sagano Scenic Ride","plan":"Witness sunrise inside the legendary bamboo groves of Arashiyama. Follow with a private hike up to the quiet local temples."},{"day":7,"title":"Kyoto Golden Altars & Tea Ceremonies","plan":"Explore Kinkaku-ji (Golden Pavilion). In the afternoon, participate in a rare private, highly ceremonial tea matching session."},{"day":8,"title":"Fushimi Inari Torii Gate Ascent","plan":"Ascend past thousands of crimson wood torii gates in Fushimi Inari in the early morning cooler breeze. Enjoy free afternoon shopping in Gion."},{"day":9,"title":"Farewell Green tea & Departures","plan":"Transfer directly to Kansai or Itami Airport via private limousine van for your flight homeward."}],"included":["All premium 5-star hotel accommodations & Ryokan nights","All Shinkansen bullet train Green-Car travel tickets","English-speaking luxury tour guide throughout the journey","Daily premium breakfast and select gourmet dinners"],"excluded":["Airfares to Tokyo/Kyoto","Discretionary leisure items, lunches & gratuities"],"galleryImages":["https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&q=80&w=800"],"coverImage":"https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800","category":"International","featured":true},{"id":"p3","name":"Swiss Alps Premium Ski & Cabin Retreat","country":"Switzerland","city":"Zermatt, Interlaken","duration":"7 Days, 6 Nights","price":4900,"description":"Savor alpine luxury. Nestled under the towering Matterhorn, you'll experience elite ski tracks, cozy Michelin dining, spa wellness cabins, and outstanding high-altitude relaxation.","highlights":["Five-star ski-in/ski-out Zermatt chalet with Matterhorn views","Exclusive VIP lift pass to avoid queues completely","Bespoke fondue tasting and fine local wine guides","Helicopter sightseeing over the high alpine peaks"],"itinerary":[{"day":1,"title":"Zermatt Car-free Arrival","plan":"Transfer via premium Swiss rail to car-free Zermatt. Check in utilizing electric hotel carriage vehicles."},{"day":2,"title":"Perfecting the Slopes","plan":"Meet with an expert ski master for private lessons or off-piste guiding. Enjoy midday chalet lunch."},{"day":3,"title":"Matterhorn Glacier Paradise","plan":"Take the premium cabin lift to the highest station in Europe. Experience the breathtaking ice palace."},{"day":4,"title":"Scenic Glacier Express Ride","plan":"Scenic ride across spectacular snow-capped bridges on the legendary Swiss alpine rail line."},{"day":5,"title":"Helicopter Peak Sightseeing","plan":"Bespoke helicopter flight outlining the iconic peaks, landing on a glacier for sparkling wine."},{"day":6,"title":"Thermal Spa Rest","plan":"Spend the day enjoying deep mineral baths while surrounded by gorgeous snowy peaks."},{"day":7,"title":"Symphony Departure","plan":"Delicious final breakfast and rail transfer back to Zurich airport."}],"included":["Chalet accommodations with open fires","VIP ski lift passes for 6 days","All private guiding & premium gear lease","Glacier express transit tickets"],"excluded":["Spa treatments not listed","International airline bookings","Personal shop acquisitions"],"galleryImages":["https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?auto=format&fit=crop&q=80&w=800"],"coverImage":"https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&q=80&w=800","category":"Adventure","featured":false}],"visas":[{"id":"v1","country":"Schengen Area (Europe)","visaType":"Tourist Visa / Business Entry","processingTime":"10-15 Working Days","requirements":["Passports must have at least 6 months remaining validity from return schedule","Certified bank records proving enough travel funds for the period (recent 3 months)","Confirmed outward/return airline tickets & verified local hotel bookings","Comprehensive Schenger-compliant global travel medical insurance worth min €30,000"],"fees":160,"documentsRequired":["Original Passport with two blank adjacent pages","Two white-background recent biological size photos","Company employment certificate or verification letters","Complete visa system application forms filled completely"],"imageUrl":"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400"},{"id":"v2","country":"United Kingdom","visaType":"Standard Visiting Visa (6 Months Multi-entry)","processingTime":"7-10 Working Days (Premium track available)","requirements":["Verified financial statements displaying strong savings","Detailed day-wise personal scheduling information","Employer NOC letter or legal property title verification files"],"fees":195,"documentsRequired":["Valid current Passport","Salary slip copies for previous consecutive 6 months","Income tax return summaries","Complete travel arrangement plan confirmation"],"imageUrl":"https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&q=80&w=400"}],"hotels":[{"id":"h_amp","hotelName":"Aman Tokyo Resort","location":"Otemachi Tower, Tokyo, Japan","stars":5,"price":1600,"amenities":["Horizon Swimming pool","Bespoke Wellness Onsen","Michelin starred Japanese Dining","24/7 personal tech concierge","High altitude gym suite"],"images":["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=800"],"description":"Set high above the Tokyo skyline, Aman Tokyo successfully integrates traditional Japanese stone-wood architecture with cutting edge space concepts. Indulge in magnificent floor-to-ceiling Mt. Fuji sunset viewscapes from your private freestanding basalt bathtub."},{"id":"h_mbs","hotelName":"The Marina Bay Sands Hotel","location":"Bayfront Avenue, Singapore","stars":5,"price":850,"amenities":["World's largest rooftop infinity pool","Luxury sands sky-deck","Twenty-four integrated premium casino bars","Direct mall access","Exceptional VIP lounge club"],"images":["https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1517840901100-8179e982ca41?auto=format&fit=crop&q=80&w=800"],"description":"Unparalleled architecture meets elite recreation. Relax on the 57th-floor sky park, hovering over the entire Singapore bay. Experience luxury shopping corridors and unmatched fine gastronomy right below your suite elevator."}],"flights":[{"id":"f1","title":"Premium Sky-Suites Promo to London","route":"Singapore (SIN) ⇄ London Heathrow (LHR)","description":"Fly in the pinnacle of aviation luxury. Includes fully enclosed private cabins, gourmet dining crafted on-demand, fine champagne cellars, and complimentary high-speed non-stop satellite Wi-Fi.","bannerUrl":"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800"},{"id":"f2","title":"Ultra Non-Stop Routes to New York JFK","route":"Dubai (DXB) ⇄ New York City (JFK)","description":"Settle into your flatbed massage seat on Emirates A380 with premium lounge access, onboard shower spa facilities, and direct fast-track airport transfer waiting upon touchdown.","bannerUrl":"https://images.unsplash.com/photo-1483450388369-9ed95738483c?auto=format&fit=crop&q=80&w=800"}],"blogs":[{"id":"b1","title":"Curating a Minimalist Premium Luggage Strategy","category":"Travel Guides","featuredImage":"https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=800","content":"<p>True ultimate luxury in traveling is not about how many heavy leather trunks you can haul. It is about complete, unfettered freedom—arriving in Kyoto, boarding high-speed bullet trains effortlessly, strolling along brick corridors, and maintaining impeccable elegance with a single bespoke weekender bag.</p><blockquote>\"To travel light is to travel free of weights and preconceptions.\"</blockquote><h3>1. The Shell Selection</h3><p>Invest in an ultra-premium polycarbonate or aircraft-grade aluminum carry-on. Opt for clean muted tones such as sage green, deep charcoal, or timeless carbon black. Remember, your suitcase is an extension of your tailored wardrobe.</p><h3>2. The Rule of Modular Cubes</h3><p>Utilize compression silk packing cubes. Allocate one cube exclusively for formal tailoring, one for relaxed linen leisure wear, and another for essential electronic components and adapters. This organization prevents folding creases and allows you to unpack your entire luggage at any boutique hotel in under sixty seconds.</p><h3>3. The Curated Toiletries Kit</h3><p>Republish your everyday grooming products into aluminum leak-proof travel vials. Carry rich solid perfume balms, customized hydration serums, and single-use herbal facial sheet masks to sustain radiant, fully-hydrated skin during long long flights.</p>","author":"Juliana West","date":"2026-05-12"},{"id":"b2","title":"Kyoto's Hidden Kissaten Cafés & Tea Sanctuaries","category":"Culinary Highlights","featuredImage":"https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800","content":"<p>Behind heavy cedar doors and unadorned sliding screens along Kyoto's narrow Gion lanes, you'll discover Kyoto's celebrated, secretive Kissaten. These are decades-old vintage coffee houses where time slows down to the pace of dripping dark roast coffee, set against the rhythmic crackle of classic jazz vinyls.</p><h3>A Sanctuary of Sensory Purity</h3><p>Inside, the master craftsman brews coffee with the precision of an ancient chemist. Water temperatures are measured to the exact decimal, and single-origin beans are ground meticulously by hand. It is not a place for rapid laptop work or loud chatter; it is an introspective space to enjoy the bitter, aromatic symphony of coffee and a thick slice of honey-toasted shokupan bread.</p>","author":"Kenji Sato","date":"2026-06-01"}],"testimonials":[{"id":"t1","photoUrl":"https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200","name":"Victoria Montgomery","country":"Switzerland","review":"Aetheria Travels engineered a flawless honeymoon for us. Every seaplane connection, private catamaran dinner, and butler arrangement in the Maldives felt entirely effortless. Truly an unmatched service.","rating":5},{"id":"t2","photoUrl":"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200","name":"Marcus Vanderbilt","country":"United States","review":"The Tokyo & Kyoto itinerary exceeded everything I had hoped for. The tea ceremony in Kyoto and the premium bullet train arrangements were pristine. I won't ever plan travels without them again.","rating":5}],"gallery":[{"id":"g1","url":"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800","category":"Destinations","title":"Maldives Reef Sighting"},{"id":"g2","url":"https://images.unsplash.com/photo-1493020256206-bd5b42d76a5e?auto=format&fit=crop&q=80&w=800","category":"Destinations","title":"Santorini Horizon sunset"},{"id":"g3","url":"https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800","category":"Hotels","title":"Aman Tokyo Lounge Suite"},{"id":"g4","url":"https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&q=80&w=800","category":"Tours","title":"Tokyo Crossway Night Lights"},{"id":"g5","url":"https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&q=80&w=800","category":"Visa","title":"UK London Big Ben"}],"faqs":[{"id":"f_faq1","question":"Are your travel packages fully customizable?","answer":"Absolutely. Every luxury itinerary shown is merely a refined starting blueprint. Our dedicated digital travel designers will craft, reshape, and personalize every single meal, transit, hotel room, and private outing based on your specific life preferences."},{"id":"f_faq2","question":"What does your global 24/7 travel butler service entail?","answer":"Once your bespoke voyage begins, you'll be assigned a dedicated personal travel butler reachable over WhatsApp/phone. From secure local booking edits, premium restaurant recommendations, medical assistance support, to spontaneous reservation creations, we hold absolute dedication over your peace of mind."},{"id":"f_faq3","question":"What is your premium cancellation and trip protection policy?","answer":"Because we interface with hyper-exclusive luxury five-star resorts and private aviation operators, specific details vary. Generally, we offer complete reschedule freedom up to thirty days prior to departure, alongside unmatched premium trip cancellation insurances."}],"leads":[{"id":"l1","name":"Harrison Fjord","phone":"+33 607 123 456","email":"harrison@fjord-enterprises.com","message":"I am looking to book the Maldives Ultra Luxury escape in early September for my family of four. Are we able to upgrade the private catamaran to a triple cabin luxury yacht?","packageId":"p1","type":"Package Booking","timestamp":"2026-06-18T14:32:00.000Z"},{"id":"l2","name":"Lady Penelope","phone":"+44 7911 123456","email":"penelope@thunderbird.uk","message":"Please could you consult on the document checklist for a standard 6-month Schengen tourist entry visa passport requirements?","visaId":"v1","type":"Visa Consultation","timestamp":"2026-06-19T08:12:00.000Z"}],"seo":{"metaTitle":"Aetheria Travels | Bespoke Luxury Expeditions & Elite Travel Curators","metaDescription":"Curating rare experiences, exclusive overwater sanctuaries, high-altitude alpine retreats, and immersive cross-cultural journeys. Travel beautiful, travel with Aetheria Travels.","keywords":"luxury travel agency, custom tours, private butler travel, maldives premium villa bookings, exclusive japan ryokan, luxury passport services, travel concierge","ogTitle":"Aetheria Travels | Rare Bespoke Voyages","ogDescription":"Discover curated retreats, private boutique flights, and completely tailored travel plans executed by our dedicated digital travel concierges.","ogImage":"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200","robotsTxt":"User-agent: *\nAllow: /\nSitemap: https://aetheriatravels.com/sitemap.xml","sitemapXml":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://aetheriatravels.com/</loc>\n    <lastmod>2026-06-19</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>"}};
+    let currentSlide = 0;
+    const slidesCount = DATA.heroSlides.length;
+
+    // Slide loop timer
+    if (slidesCount > 1) {
+      setInterval(() => {
+        let nextSlide = (currentSlide + 1) % slidesCount;
+        setSlide(nextSlide);
+      }, 5000);
+    }
+
+    function setSlide(index) {
+      document.getElementById('slide-' + currentSlide)?.classList.remove('opacity-100', 'scale-100', 'z-10');
+      document.getElementById('slide-' + currentSlide)?.classList.add('opacity-0', 'scale-105', 'z-0');
+      document.getElementById('dot-' + currentSlide)?.classList.remove('bg-accent-luxury', 'scale-125');
+      document.getElementById('dot-' + currentSlide)?.classList.add('bg-slate-600');
+
+      currentSlide = index;
+
+      document.getElementById('slide-' + currentSlide)?.classList.remove('opacity-0', 'scale-105', 'z-0');
+      document.getElementById('slide-' + currentSlide)?.classList.add('opacity-100', 'scale-100', 'z-10');
+      document.getElementById('dot-' + currentSlide)?.classList.remove('bg-slate-600');
+      document.getElementById('dot-' + currentSlide)?.classList.add('bg-accent-luxury', 'scale-125');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    function navigateTo(hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Dynamic Package rendering
+    function renderPackages(list) {
+      const container = document.getElementById('packagesContainer');
+      if (!container) return;
+      
+      if (list.length === 0) {
+        container.innerHTML = `<div class="col-span-full py-16 text-center text-slate-400 text-sm font-mono border border-dashed border-white/10 rounded-2xl">
+          No premium expeditions found matching your selected coordinates.
+        </div>`;
+        return;
+      }
+
+      container.innerHTML = list.map(p => {
+        const starCount = p.category === 'Luxury' ? 5 : 4;
+        const discountString = p.discountPrice ? `
+          <span class="text-[10px] text-slate-450 line-through mr-1 font-sans font-light">$ ${p.price}</span>
+          <span class="text-emerald-400 font-bold">$ ${p.discountPrice}</span>
+        ` : `<span class="text-slate-200 font-bold">$ ${p.price}</span>`;
+        
+        return `
+          <div class="rounded-3xl glass-card overflow-hidden flex flex-col h-full animate-fade-in group relative">
+            ${p.featured ? `
+              <span class="absolute top-4 left-4 z-20 bg-accent-gold text-slate-950 font-mono text-[9px] uppercase tracking-widest px-3 py-1 rounded-full font-bold">FEATURING</span>
+            ` : ''}
+            
+            <div class="h-56 relative overflow-hidden shrink-0">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent z-10"></div>
+              <img src="${p.coverImage || 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format=crop&q=80&w=800'}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&q=80&w=800'">
+              
+              <div class="absolute bottom-4 left-6 z-20 flex flex-col gap-1">
+                <span class="text-[10px] font-mono text-accent-luxury uppercase tracking-widest">${p.city}, ${p.country}</span>
+              </div>
+            </div>
+
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-350">${p.category}</span>
+                  <span class="text-xs text-slate-400 font-mono"><i data-lucide="clock" class="w-3.5 h-3.5 inline text-accent-luxury mr-1"></i>${p.duration}</span>
+                </div>
+                
+                <h3 class="font-serif text-lg font-bold text-white mb-3 hover:text-accent-luxury transition-colors leading-snug cursor-pointer" onclick="openPackageInquiry('${p.id}')">${p.name}</h3>
+                <p class="text-slate-400 text-xs font-light leading-relaxed line-clamp-3 mb-6">${p.description}</p>
+              </div>
+
+              <div class="border-t border-white/10 pt-4 flex items-center justify-between mt-auto">
+                <div>
+                  <span class="text-[9px] uppercase tracking-wider text-slate-500 block">TARIFF starting</span>
+                  <span class="text-sm font-semibold font-serif block mt-0.5">${discountString} <span class="text-[10px] text-slate-400">USD</span></span>
+                </div>
+                <button onclick="openPackageInquiry('${p.id}')" class="bg-gradient-to-r from-accent-luxury to-amber-700 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs tracking-wider uppercase transition-all duration-300">
+                  Inspect Details
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      
+      // Update Lucide Icons dynamically
+      lucide.createIcons();
+    }
+
+    function runLocalSearch() {
+      const keyword = document.getElementById('searchKeyword').value.toLowerCase().trim();
+      const category = document.getElementById('searchCategory').value;
+      const maxPrice = parseFloat(document.getElementById('searchMaxPrice').value);
+
+      const filtered = DATA.packages.filter(p => {
+        const matchesKeyword = !keyword || p.name.toLowerCase().includes(keyword) || p.country.toLowerCase().includes(keyword) || p.city.toLowerCase().includes(keyword) || p.description.toLowerCase().includes(keyword);
+        const matchesCategory = !category || p.category === category;
+        
+        let packagePrice = p.discountPrice || p.price;
+        const matchesPrice = !maxPrice || packagePrice <= maxPrice;
+
+        return matchesKeyword && matchesCategory && matchesPrice;
+      });
+
+      renderPackages(filtered);
+    }
+
+    function clearSearch() {
+      document.getElementById('searchKeyword').value = '';
+      document.getElementById('searchCategory').value = '';
+      document.getElementById('searchMaxPrice').value = '';
+      renderPackages(DATA.packages);
+    }
+
+    // Modal Operations
+    function openPackageInquiry(pkgId) {
+      const pkg = DATA.packages.find(p => p.id === pkgId);
+      if (!pkg) return;
+
+      const modal = document.getElementById('packageModal');
+      const content = document.getElementById('pkgModalContent');
+
+      content.innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 shrink-0">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] relative">
+            <img src="${pkg.coverImage}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&q=80&w=800'">
+            <div class="absolute bottom-4 left-4 bg-slate-900/90 px-3 py-1.5 border border-white/10 rounded-xl">
+              <span class="text-xs text-accent-luxury font-medium">${pkg.duration}</span>
+            </div>
+          </div>
+          
+          <div class="flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-accent-luxury uppercase tracking-wider block mb-1">${pkg.category} Category</span>
+              <h2 class="font-serif text-2xl font-bold text-white mb-3">${pkg.name}</h2>
+              <p class="text-slate-350 text-xs font-light leading-relaxed mb-6">${pkg.description}</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+              <div>
+                <span class="text-[9px] text-slate-400 block font-mono">Special Exclusive Price</span>
+                <span class="text-xl font-bold text-emerald-400 font-serif">$${pkg.discountPrice || pkg.price} <span class="text-xs text-slate-350 font-sans">USD per traveler</span></span>
+              </div>
+              <a href="https://wa.me/${DATA.company.whatsappNumber}?text=Inquiring about ${encodeURIComponent(pkg.name)}" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold p-3 rounded-xl flex items-center justify-center transition-colors">
+                <i data-lucide="message-square" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 flex flex-col gap-6">
+          <!-- Highlights block -->
+          <div>
+            <h4 class="font-bold text-white text-sm mb-3 font-mono border-b border-white/5 pb-2">Voyage Highlights</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              ${pkg.highlights.map(h => `
+                <div class="flex items-start gap-2.5 text-xs text-slate-300">
+                  <i data-lucide="sun" class="w-4 h-4 text-accent-luxury shrink-0 mt-0.5"></i>
+                  <span>${h}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Included/Excluded list -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-bold text-emerald-400 text-sm mb-3 font-mono border-b border-emerald-500/10 pb-2">Prerogatives Included</h4>
+              <ul class="flex flex-col gap-2 text-xs text-slate-300 list-none pl-1">
+                ${pkg.included.map(inc => `
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> ${inc}</li>
+                `).join('')}
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-amber-500 text-sm mb-3 font-mono border-b border-amber-500/10 pb-2">Exclusions</h4>
+              <ul class="flex flex-col gap-2 text-xs text-slate-400 list-none pl-1">
+                ${pkg.excluded.map(exc => `
+                  <li class="flex items-start gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5"></i> ${exc}</li>
+                `).join('')}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Day Wise Itinerary -->
+          <div>
+            <h4 class="font-bold text-white text-sm mb-4 font-mono border-b border-white/5 pb-2">Day-Wise Itinerary Plan</h4>
+            <div class="flex flex-col gap-3">
+              ${pkg.itinerary.map(i => `
+                <details class="group rounded-xl border border-white/5 bg-white/5 overflow-hidden">
+                  <summary class="p-4 flex items-center justify-between text-xs font-semibold text-slate-200 hover:text-white cursor-pointer select-none">
+                    <span>Day ${i.day}: ${i.title}</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180"></i>
+                  </summary>
+                  <p class="p-4 border-t border-white/5 text-slate-400 text-xs font-light leading-relaxed bg-slate-950/20">${i.plan}</p>
+                </details>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Internal Inquiry Form -->
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 mt-4">
+            <h4 class="font-serif text-lg font-bold text-white mb-4">Request Complete Booking Draft</h4>
+            <form onsubmit="handleDirectInquiry(event, '${pkg.id}', 'Package Booking')" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <input type="text" placeholder="Your Name" required id="pkgInqName" class="glass-input p-3 rounded-lg text-xs">
+              <input type="email" placeholder="Your Email" required id="pkgInqEmail" class="glass-input p-3 rounded-lg text-xs">
+              <input type="tel" placeholder="WhatsApp Number" required id="pkgInqPhone" class="glass-input p-3 rounded-lg text-xs">
+              <textarea placeholder="Specific comments/customizations requested..." id="pkgInqMessage" class="glass-input p-3 rounded-lg text-xs col-span-full" rows="2"></textarea>
+              <button type="submit" class="bg-gradient-to-r from-accent-luxury to-amber-700 text-slate-950 font-bold p-3 rounded-xl col-span-full text-xs uppercase tracking-widest transition-transform active:scale-95">Send Draft Booking Inquiry</button>
+            </form>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closePackageModal() {
+      document.getElementById('packageModal').classList.add('hidden');
+    }
+
+    // Visa/Hotel/Flight quick consultation routing 
+    function openVisaInquiry(visaId) {
+      const v = DATA.visas.find(x => x.id === visaId);
+      if (!v) return;
+      document.getElementById('leadType').value = 'Visa Consultation';
+      document.getElementById('leadMessage').value = `Requesting complete consultation briefing guidelines for my upcoming travel coordinates under Schengen standards regarding Visa requirements for: ${v.country}.`;
+      navigateTo('contact');
+      showToast(`Configured Visa inquiry coordinates below!`);
+    }
+
+    function openHotelInquiry(hotelId) {
+      const h = DATA.hotels.find(x => x.id === hotelId);
+      if (!h) return;
+      document.getElementById('leadType').value = 'Hotel Query';
+      document.getElementById('leadMessage').value = `Requesting five-star boutique reservations for accommodation lodging at: ${h.hotelName}.`;
+      navigateTo('contact');
+      showToast(`Bespoke partnership hotel configured inside Inquiry!`);
+    }
+
+    function openFlightInquiry(route) {
+      document.getElementById('leadType').value = 'Flight Request';
+      document.getElementById('leadMessage').value = `Inquiring custom flight schedules with premium cabin suites on the route corridor: ${route}.`;
+      navigateTo('contact');
+      showToast(`Flight ticket parameters transferred!`);
+    }
+
+    // Lead capturing mechanism
+    function handleClientSubmission(event) {
+      event.preventDefault();
+      const submission = {
+        id: 'cl_' + Date.now(),
+        name: document.getElementById('leadName').value,
+        phone: document.getElementById('leadPhone').value,
+        email: document.getElementById('leadEmail').value,
+        message: document.getElementById('leadMessage').value,
+        type: document.getElementById('leadType').value,
+        timestamp: new Date().toISOString()
+      };
+
+      // Push into client localStorage (travel_leads)
+      let currentLeads = [];
+      try {
+        currentLeads = JSON.parse(localStorage.getItem('travel_leads')) || [];
+      } catch (err) {}
+      
+      currentLeads.push(submission);
+      localStorage.setItem('travel_leads', JSON.stringify(currentLeads));
+
+      showToast('Concierge Draft Submitted successfully!');
+      document.getElementById('clientContactForm').reset();
+    }
+
+    // Direct Inquiry from Modal
+    function handleDirectInquiry(event, rawId, type) {
+      event.preventDefault();
+      
+      const submission = {
+        id: 'inq_' + Date.now(),
+        name: document.getElementById('pkgInqName').value,
+        phone: document.getElementById('pkgInqPhone').value,
+        email: document.getElementById('pkgInqEmail').value,
+        message: document.getElementById('pkgInqMessage').value,
+        packageId: rawId,
+        type: type,
+        timestamp: new Date().toISOString()
+      };
+
+      // Storage
+      let currentLeads = [];
+      try {
+        currentLeads = JSON.parse(localStorage.getItem('travel_leads')) || [];
+      } catch (err) {}
+      
+      currentLeads.push(submission);
+      localStorage.setItem('travel_leads', JSON.stringify(currentLeads));
+
+      closePackageModal();
+      showToast('Spec booking catalog requested successfully!');
+    }
+
+    // Blog reader Modal window
+    function openBlogModal(blogId) {
+      const b = DATA.blogs.find(x => x.id === blogId);
+      if (!b) return;
+
+      document.getElementById('blogModalCategory').innerText = b.category.toUpperCase();
+      document.getElementById('blogModalBody').innerHTML = `
+        <div class="h-64 rounded-2xl overflow-hidden mb-6">
+          <img src="${b.featuredImage}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=800'">
+        </div>
+        <h1 class="font-serif text-3xl font-bold text-white mb-4 leading-tight">${b.title}</h1>
+        <div class="flex items-center gap-4 text-xs text-slate-400 mb-6 font-mono border-b border-white/5 pb-4">
+          <span>By ${b.author}</span>
+          <span>•</span>
+          <span>${b.date}</span>
+        </div>
+        <div class="text-slate-300 text-sm font-light leading-relaxed space-y-6 max-w-none">
+          ${b.content}
+        </div>
+      `;
+
+      document.getElementById('blogModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeBlogModal() {
+      document.getElementById('blogModal').classList.add('hidden');
+    }
+
+    // Full Gallery Filter controller 
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item-wrapper');
+      
+      // Update Buttons
+      const buttons = ['All', 'Destinations', 'Hotels', 'Tours', 'Visa', 'Events'];
+      buttons.forEach(btn => {
+        const btnElem = document.getElementById('galBtn-' + btn);
+        if (!btnElem) return;
+        if (btn === category) {
+          btnElem.className = 'px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-accent-luxury bg-accent-luxury text-slate-950 transition-all duration-200';
+        } else {
+          btnElem.className = 'px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-slate-300 hover:text-white transition-all duration-200';
+        }
+      });
+
+      items.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (category === 'All' || itemCat === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    function openFullscreenImage(url) {
+      const viewer = document.getElementById('imageViewer');
+      const img = document.getElementById('viewerImg');
+      img.src = url;
+      viewer.classList.remove('hidden');
+    }
+
+    function closeFullscreenImage() {
+      document.getElementById('imageViewer').classList.add('hidden');
+    }
+
+    // Accordion handler
+    function toggleFaq(index) {
+      const answer = document.getElementById('faqAnswer-' + index);
+      const chevron = document.getElementById('faqChevron-' + index);
+      
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+      } else {
+        answer.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Custom Toast Alert
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toastMsg');
+      msg.innerText = message;
+      
+      toast.classList.remove('opacity-0', 'translate-y-12');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-12');
+      }, 3500);
+    }
+
+    // Bootstrap app
+    window.addEventListener('DOMContentLoaded', () => {
+      // Create initial icons
+      lucide.createIcons();
+      // Render initial packages
+      renderPackages(DATA.packages);
+    });
+
+    // Handle scroll header style transitions
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 40) {
+        header.style.backgroundColor = 'rgba(15, 23, 42, 0.9)';
+      } else {
+        header.style.backgroundColor = 'rgba(15, 23, 42, 0.45)';
+      }
+    });
+  </script>
+
+  <!-- REGISTER PWA CLIENT SERVICE WORKER -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Inline simple dummy service worker cache handler for instant true PWA offline compliance
+      const swCode = `
+        const CACHE_NAME = 'travel-curators-v1';
+        const ASSETS = [
+          './',
+          './index.html',
+        ];
+
+        self.addEventListener('install', event => {
+          event.waitUntil(
+            caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
+          );
+        });
+
+        self.addEventListener('fetch', event => {
+          event.respondWith(
+            caches.match(event.request).then(cached => cached || fetch(event.request))
+          );
+        });
+      `;
+
+      const blob = new Blob([swCode], { type: 'application/javascript' });
+      const swUrl = URL.createObjectURL(blob);
+      navigator.serviceWorker.register(swUrl).catch(err => console.log('SW registration missed:', err));
+    }
+  </script>
+
+</body>
+</html>
